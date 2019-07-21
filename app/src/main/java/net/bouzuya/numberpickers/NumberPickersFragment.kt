@@ -24,6 +24,9 @@ class NumberPickersFragment : Fragment() {
         return NumberPickersFragmentBinding.inflate(inflater, container, false).also { binding ->
             binding.lifecycleOwner = this
             binding.viewModel = viewModel
+            binding.numberPicker1.maxValue = 9
+            binding.numberPicker1.minValue = 0
+            binding.numberPicker1.wrapSelectorWheel = false
         }.root
     }
 }
