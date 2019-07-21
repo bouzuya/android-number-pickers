@@ -28,10 +28,19 @@
         <NumberPicker
             android:id="@+id/numberPicker1"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:value="@={viewModel.number1}"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/numberPicker2"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+        <NumberPicker
+            android:id="@+id/numberPicker2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:value="@={viewModel.number2}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/numberPicker1"
             app:layout_constraintTop_toBottomOf="@id/textView2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
