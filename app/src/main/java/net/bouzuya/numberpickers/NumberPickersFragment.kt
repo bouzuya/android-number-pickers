@@ -6,28 +6,24 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
-import net.bouzuya.numberpickers.databinding.HomeFragmentBinding
+import net.bouzuya.numberpickers.databinding.NumberPickersFragmentBinding
 
 
-class HomeFragment : Fragment() {
+class NumberPickersFragment : Fragment() {
 
     companion object {
-        fun newInstance() = HomeFragment()
+        fun newInstance() = NumberPickersFragment()
     }
 
-    private val viewModel: HomeViewModel by viewModels()
+    private val viewModel: NumberPickersViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return HomeFragmentBinding.inflate(inflater, container, false).also { binding ->
+        return NumberPickersFragmentBinding.inflate(inflater, container, false).also { binding ->
             binding.lifecycleOwner = this
             binding.viewModel = viewModel
-            binding.button.setOnClickListener {
-                findNavController().navigate(R.id.action_homeFragment_to_numberPickersFragment)
-            }
         }.root
     }
 }
