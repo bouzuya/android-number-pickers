@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">NumberPickers</string>
     <string name="home_button_text">Go To Number Pickers</string>
+    <string name="number_pickers_ok_button_text">OK</string>
 </resources>
