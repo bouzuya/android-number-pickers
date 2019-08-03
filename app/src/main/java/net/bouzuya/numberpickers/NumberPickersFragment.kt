@@ -10,11 +10,6 @@ import net.bouzuya.numberpickers.databinding.NumberPickersFragmentBinding
 
 
 class NumberPickersFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = NumberPickersFragment()
-    }
-
     private val viewModel: NumberPickersViewModel by viewModels()
 
     override fun onCreateView(
