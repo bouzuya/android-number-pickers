@@ -11,11 +11,6 @@ import net.bouzuya.numberpickers.databinding.HomeFragmentBinding
 
 
 class HomeFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = HomeFragment()
-    }
-
     private val viewModel: HomeViewModel by viewModels()
 
     override fun onCreateView(
