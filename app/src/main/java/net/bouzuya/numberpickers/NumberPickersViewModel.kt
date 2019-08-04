@@ -12,8 +12,8 @@ class NumberPickersViewModel : ViewModel() {
     val result: LiveData<Int> = _result
 
     fun ok() {
-        val n1 = number1.value?.let { it * 10 } ?: 0
+        val n1 = number1.value ?: 0
         val n2 = number2.value ?: 0
-        _result.value = n1 + n2
+        _result.value = n1 * 10 + n2
     }
 }

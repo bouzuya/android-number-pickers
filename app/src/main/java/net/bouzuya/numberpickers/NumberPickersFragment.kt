@@ -19,12 +19,17 @@ class NumberPickersFragment : Fragment() {
         return NumberPickersFragmentBinding.inflate(inflater, container, false).also { binding ->
             binding.lifecycleOwner = this
             binding.viewModel = viewModel
-            binding.numberPicker1.maxValue = 9
-            binding.numberPicker1.minValue = 0
-            binding.numberPicker1.wrapSelectorWheel = false
-            binding.numberPicker2.maxValue = 9
-            binding.numberPicker2.minValue = 0
-            binding.numberPicker2.wrapSelectorWheel = false
+
+            binding.numberPicker1.also { numberPicker ->
+                numberPicker.maxValue = 9
+                numberPicker.minValue = 0
+                numberPicker.wrapSelectorWheel = false
+            }
+            binding.numberPicker2.also { numberPicker ->
+                numberPicker.maxValue = 9
+                numberPicker.minValue = 0
+                numberPicker.wrapSelectorWheel = false
+            }
         }.root
     }
 }
