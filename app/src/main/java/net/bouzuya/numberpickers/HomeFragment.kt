@@ -21,7 +21,8 @@ class HomeFragment : Fragment() {
             binding.lifecycleOwner = this
             binding.viewModel = viewModel
             binding.button.setOnClickListener {
-                findNavController().navigate(R.id.action_homeFragment_to_numberPickersFragment)
+                val action = HomeFragmentDirections.actionHomeFragmentToNumberPickersFragment()
+                findNavController().navigate(action)
             }
         }.root
     }

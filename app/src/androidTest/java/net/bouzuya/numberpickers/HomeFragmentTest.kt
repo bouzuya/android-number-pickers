@@ -21,6 +21,7 @@ class HomeFragmentTest {
             Navigation.setViewNavController(fragment.view!!, navController)
         }
         onView(withId(R.id.button)).perform(click())
-        verify(navController).navigate(R.id.action_homeFragment_to_numberPickersFragment)
+        val action = HomeFragmentDirections.actionHomeFragmentToNumberPickersFragment()
+        verify(navController).navigate(action)
     }
 }
