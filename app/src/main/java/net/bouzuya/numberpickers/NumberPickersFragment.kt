@@ -10,7 +10,9 @@ import net.bouzuya.numberpickers.databinding.NumberPickersFragmentBinding
 
 
 class NumberPickersFragment : Fragment() {
-    private val viewModel: NumberPickersViewModel by viewModels()
+    private val viewModel: NumberPickersViewModel by viewModels {
+        ServiceLocator.providesNumberPickersViewModelFactory()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
